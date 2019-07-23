@@ -82,7 +82,7 @@ class resumo extends Component {
                                                         currency: "BRL"
                                                     })
                                         }
-                                        <span className="badge ml-1 badge-success">
+                                        <span className={"badge ml-1 " + (this.state.faturamento.anterior.comparativo > 0 ? "badge-success": "badge-danger")}>
                                             {
                                                 this.state.faturamento.anterior
                                                     .comparativo
@@ -105,7 +105,7 @@ class resumo extends Component {
                                                         currency: "BRL"
                                                     })
                                         }
-                                        <span className="badge ml-1 badge-danger">
+                                        <span className={"badge ml-1 " + (this.state.faturamento.previsao.comparativo > 0 ? "badge-success": "badge-danger")}>>
                                             {
                                                 this.state.faturamento.previsao
                                                     .comparativo
