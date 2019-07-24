@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { URL_APi} from '../../services/base';
 class faturamento extends Component {
 
     constructor(props) {
@@ -11,7 +11,7 @@ class faturamento extends Component {
     }
 
     componentDidMount() {
-        fetch("http://www.devup.com.br/php/api-dashboard/api/faturamento")
+        fetch(`${URL_APi}/faturamento`)
             .then(resultado => resultado.json().then(dados => this.setState(dados)));
     }
 
