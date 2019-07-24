@@ -1,18 +1,26 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 const menuSuperior = () => (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a href="/" className="navbar-brand">Meu Dasboard</a>
-    <button className="navbar-toggler" type="button" data-togger="collapse" data-target="#navbarNav">
-        <span className="navbar-togger-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav mr-auto">
-            <li>sa</li>
-        </ul>
-    </div>
-</nav>
+        <Link to="/" className="navbar-brand">Meu Dasboard</Link>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav mr-auto">
+                <li className="nav-item">
+                    <Link to="/" className="nav-link">Resumo</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/consulta" className="nav-link">Consultas</Link>
+                </li>
+                <li className="nav-item">
+                    <Link to="/faturamento" className="nav-link">Faturamento</Link>
+                </li>
+            </ul>
+        </div>
+    </nav>
 );
 
 
