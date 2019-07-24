@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { URL_APi} from '../../services/base';
+import {consultarResumo} from '../../services/resumo';
 class resumo extends Component {
     constructor(props) {
         super(props);
@@ -22,8 +22,7 @@ class resumo extends Component {
     }
 
     componentDidMount() {
-        fetch(`${URL_APi}/resumo`)
-            .then(resultado => resultado.json()).then(dados => this.setState(dados));
+        consultarResumo().then(dados => this.setState(dados));
     }
 
     render() {
